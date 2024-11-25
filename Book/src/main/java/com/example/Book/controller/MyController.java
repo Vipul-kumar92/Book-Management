@@ -51,7 +51,7 @@ public class MyController {
 		
 	}
 //	@GetMapping("/addbooks/{id}")
-//	public NewBook getbook(@PathVariable("id") Long id) {
+//	public NewBook getbook(@PathVariable("id") Integer id) {
 //	    // Return the found book
 //	    return bookDetail.getbook(id);
 //	}

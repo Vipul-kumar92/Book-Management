@@ -14,4 +14,5 @@ public interface BookDetail {
 	void delete(Integer id);
 	
 	
+	
 }
