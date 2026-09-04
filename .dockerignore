@@ -1,0 +1,6 @@
+.git
+.vercel
+book_store/node_modules
+book_store/build
+Book/target
+*.log
