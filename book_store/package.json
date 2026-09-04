@@ -19,9 +19,9 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "prestart": "powershell -Command \"if (-not (Test-Path node_modules\\.bin\\node.exe)) { Copy-Item 'C:\\Program Files\\nodejs\\node.exe' 'node_modules\\.bin\\node.exe' -Force -ErrorAction SilentlyContinue }\"",
+    "prestart": "node -e \"if (process.platform === 'win32') try { require('fs').copyFileSync(process.execPath, 'node_modules/.bin/node.exe') } catch (e) {}\"",
     "start": "react-scripts start",
-    "prebuild": "powershell -Command \"if (-not (Test-Path node_modules\\.bin\\node.exe)) { Copy-Item 'C:\\Program Files\\nodejs\\node.exe' 'node_modules\\.bin\\node.exe' -Force -ErrorAction SilentlyContinue }\"",
+    "prebuild": "node -e \"if (process.platform === 'win32') try { require('fs').copyFileSync(process.execPath, 'node_modules/.bin/node.exe') } catch (e) {}\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
