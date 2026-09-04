@@ -5,6 +5,7 @@ services:
     dockerfilePath: ./Book/Dockerfile
     dockerContext: ./Book
     plan: free
+    healthCheckPath: /health
     envVars:
       - key: PORT
         value: 8080
